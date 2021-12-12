@@ -1,0 +1,1028 @@
+/*Style du body*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FAEAD9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/***** CSS POUR LE HEADER *****/
+
+/*style "par défaut"*/
+header p{
+  color:white;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/*Adaptation pour les grands écrans*/
+.container1 {
+	max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+/*Alignement adapté pour les boxes*/
+.main-header .container1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+  background-color:#F1AD6E;
+}
+
+/*Style des listes et colonnes*/
+ .main-nav{
+  width: 35%;
+ }
+
+.main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+
+.main-nav li {
+	display: inline;
+}
+
+.main-nav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+}
+
+main {
+  min-height: 300px;
+}
+
+main h2{
+  padding: 30px 10px;
+  text-align: center;
+}
+
+/*logo*/
+.mh-logo{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.mh-logo > img{
+  width: 30%;
+}
+
+/*création du bouton animé*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;/*taille texte boutton*/
+    color: white;
+    background:  #DF7979;
+    transition: 1s;
+    box-shadow: 6px 6px 0 #8B8A89;
+    transform: skewX(-15deg);
+}
+
+.cta:focus {
+   outline: none; 
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #6225E6;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;/*agrandissament du bouton quand curseur dessus*/
+}
+
+  .cta > span {
+    transform: skewX(15deg) 
+  }
+
+  .cta > span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #6225E6;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+/*Création de l'animation du titre*/
+@keyframes tipsy {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);/*360 deg de base*/
+  }
+}
+
+b {
+  color: #fffbf1;
+  text-shadow: 0 20px 39px #2e2e31, 0 40px 90px #8B8A89;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 0;
+  position: relative;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+b:before,
+b:after {
+  content: '';
+  padding: .9em .4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 8px solid #DF7979;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 45s infinite alternate ease-in-out tipsy;
+}
+
+b:before {
+  border-color: #DF7979 #DF7979 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+b:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #DF7979 #DF7979;
+  }
+
+/***** FIN DU HEADER *****/
+
+
+/***** CSS POUR LE FOOTER *****/
+
+  footer {
+    width: 100%;
+    padding:40px 0;
+    position:relative;
+    bottom:0;
+    background-color:#F1AD6E;
+    color:white;
+  }
+  
+/*Style des réseaux sociaux*/
+  footer .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+
+  footer .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid white;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  } 
+
+  footer .social > a:hover {
+    color:#6225E6;
+    border:1px solid #6225E6;
+  }
+
+/*Style du copyright*/
+  footer .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:white;
+    margin-bottom:0;
+  }
+
+
+/***** FIN DU FOOTER *****/
+
+/***** CSS POUR LE DASHBOARD *****/
+
+.conteneur-flexible-ligne{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: #FAEAD9; 
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 20px 0px;
+}
+
+.ligne{
+  flex-direction: row; /*Axe principal = axe horizontal*/
+}
+
+.conteneur-flexible-ligne > *{
+  height: 100%;
+  background-color: white; 
+  border: 2px solid #DF7979;
+  box-sizing: border-box;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #8B8A89;
+  border-radius: 8px;
+}
+
+.element-flexible-1{
+  flex: 1 1 50px;
+  width: 100%;
+}
+
+main > * > * > h2{
+  margin: 0px;
+  padding: 15px;
+  font-family: 'Slabo 27px', serif;
+  height: 12%;
+  text-align: center;
+  text-shadow:   -1px -1px 0 #DF7979,
+    1px -1px 0 #DF7979,
+    -1px 1px 0 #DF7979,
+    1px 1px 0 #DF7979,
+    1px 1px 2px #DF7979,
+    1px 1px 3px #DF7979,
+    1px 1px 4px #DF7979,
+    1px 1px 4px #DF7979,
+    1px 1px 5px #DF7979,
+    1px 1px 2px #DF7979,
+    1px 1px 2px #DF7979;
+  color:#fff;
+  font-size: 2vw;
+  /*border-bottom: 2px solid #DF7979;*/
+}
+
+.element-flexible-2{
+  flex: 1 1 50px;
+  width: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.element-flexible-3{
+  flex: 1 1 50px;
+  width: 25%;
+}
+
+.element-flexible-4{
+  flex: 1 1 25%;
+  width: auto;
+}
+
+/***** FIN DASHBOARD *****/
+
+/***** CSS API CHATS *****/
+
+.cat__main{
+  height: 70%;
+  align-items: center;
+}
+
+.cat__img{
+  max-height: 70%;
+  max-width: 70%;
+  margin:1rem;
+  border-radius: 5%;
+  box-shadow: 10px 5px 10px #8B8A89;
+}
+
+.cat__btn{
+  padding: 1rem;
+  margin: 1rem;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.center {
+  width: 26%;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.bouton {
+  padding: 1.5rem 0;
+  filter: url('#goo');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: #DF7979;
+  color: white;
+  font-weight: bold;
+  padding: 1.18em 1.32em 1.03em;
+  line-height: 1;
+  border-radius: 1em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1vw;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.btn:before,
+.btn:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: #DF7979;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.btn:before {
+  top: -25%;
+  left: 20%;
+}
+
+.btn:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.btn:hover:before,
+.btn:hover:after{
+  transform: none;
+}
+
+.boite {
+  height: 100%;
+}
+
+.boite > * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boite > h2{
+  text-shadow:   -1px -1px 0 #DF7979,  
+    1px -1px 0 #DF7979,
+    -1px 1px 0 #DF7979,
+     1px 1px 0 #DF7979,
+     1px 1px 2px #DF7979,
+     1px 1px 3px #DF7979,
+     1px 1px 4px #DF7979,
+     1px 1px 4px #DF7979,
+     1px 1px 5px #DF7979,
+     1px 1px 2px #DF7979,
+     1px 1px 2px #DF7979;color:#fff;
+  height: 12%;
+  padding:0px;
+  margin: 0px;
+  margin-top: 2%;
+  font-family: 'Slabo 27px', serif;
+  
+}
+/***** FIN CHATS *****/
+
+
+/***** CSS POUR TWEETS *****/
+.cont_tweet{
+  width: 100%;
+  height: 88%; 
+  align-items: center;
+}
+
+.tweet > a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont_img a{
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont_img img{
+  max-width: 70%;
+  max-height: 225px;
+  border-radius: 5%;
+  box-shadow: 10px 5px 10px #8B8A89;
+}
+
+/*Bouton tweet*/
+:root {
+  --bg: #1a1e24;
+  --color: #eee;
+  --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bouton_tweet {
+  height: 40px;
+  filter: url('#goo');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_tweet {
+  display: inline-block;
+  text-align: center;
+  background: #DF7979;
+  color: white;
+  font-weight: bold;
+  padding: 1.18em 1.32em 1.03em;
+  line-height: 1;
+  border-radius: 1em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1vw;
+}
+
+.btn_tweet:hover{
+  cursor: pointer;
+}
+
+.btn_tweet:before,
+.btn_tweet:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: #DF7979;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.btn_tweet:before {
+  top: -25%;
+  left: 20%;
+}
+
+.btn_tweet:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.btn_tweet:hover:before,
+.btn_tweet:hover:after{
+  transform: none;
+}
+/***** FIN TWEETS *****/
+
+
+/***** FIN TWEETS *****/
+
+/***** CSS POUR CAROUSSEL *****/
+
+.contCard {
+  height: 88%;
+  width: 90%;
+  margin: 0% 5%;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.titleCard {
+  color: #DF7979;
+  font-weight: bold;
+  position: absolute;
+  font-size: 1.1vw;
+  left: 15%;
+  top: 15px;
+}
+
+.card > h4 {
+  color: #F1AD6E;
+  font-weight: 300;
+  position: absolute;
+  font-size: 1vw;
+  left: 15%;
+  top: 45px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 15%;
+  height: 5px;
+  width: 70%;
+}
+
+.emptybar {
+  background-color: #8B8A89;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, #6225E6 0%, #DF7979 65%, #F1AD6E 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 100%;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+.candidat{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-self: flex-end;
+}
+
+
+/***** CSS POUR LES PROGRAMMES DES CANDIDATS *****/
+
+.slider {
+  width: 100%;
+  height: 350px;
+  /*text-align: center;
+  overflow: hidden;*/
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  background: #8B8A89;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+
+.slider > a:active {
+  top: 1px;
+}
+
+.slider > a:focus {
+  background: #000;
+} 
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: #8B8A89;
+  border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 99%;
+  height: 333px;
+  margin-right: 50px;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.slides > div::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.slides > div::-webkit-scrollbar-thumb {
+  background: #8B8A89;
+  border-radius: 10px;
+}
+
+.slides > div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides h1{
+  color:#DF7979;
+  margin: 30px 0px 0px 0px;
+  font-size: 1.8vw;
+}
+
+.slides h2{
+  color: #F1AD6E;
+  margin-top: 0px;
+  font-size: 1.5vw;
+}
+
+.slides p{
+  text-align: justify;
+  padding: 0px 30px;
+}
+
+/***** FIN PROGRAMME *****/
+
+
+/***** CSS POUR LES TIMELINES *****/
+
+.r-title{
+  margin-top: var(--rTitleMarginTop, 0) !important;
+  margin-bottom: var(--rTitleMarginBottom, 0) !important;
+}
+
+
+.slides2 {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slides2::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.slides2::-webkit-scrollbar-thumb {
+  background: #8B8A89;
+  border-radius: 10px;
+}
+
+.slides2::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides2 > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 96%;
+  height: 300px;
+  margin-right: 0px;
+  margin-left: 65px;
+  border-radius: 10px;
+  background: #FAEAD9;
+  border: solid #F1AD6E;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  overflow: scroll;  
+  display: flex;
+  flex-direction: column;
+}
+
+.slides2 > div::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.slides2 > div::-webkit-scrollbar-thumb {
+  background: #8B8A89;
+  border-radius: 10px;
+}
+
+.slides2 > div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides2 h2{
+  color: #F1AD6E;
+  margin-top: 0px;
+  font-size: 2vw;
+}
+
+.slides2 p{
+  text-align: justify;
+  padding: 0px 30px;
+}
+
+
+.card__content > p:not([class]){
+  line-height: var(--cssTypographyLineHeight, 1.78);
+  margin-top: var(--cssTypographyBasicMargin, 1em);
+  margin-bottom: 0;
+}
+
+.card__content > p:not([class]):first-child{
+  margin-top: 0;
+}
+
+.text{
+  display: var(--textDisplay, inline-flex);
+  font-size: var(--textFontSize, 1rem);  
+}
+
+
+.time{
+  display: var(--timeDisplay, inline-flex);
+}
+
+
+.time__month{
+  margin-left: var(--timelineMounthMarginLeft, .25em);
+}
+
+.time{
+  padding: var(--timePadding, .25rem 1.25rem .25rem);
+  background-color: var(--timeBackgroundColor, #f0f0f0);
+
+  font-size: var(--timeFontSize, .75rem);
+  font-weight: var(--timeFontWeight, 700);
+  text-transform: var(--timeTextTransform, uppercase);
+  color: var(--timeColor, currentColor);
+}
+
+.card__content{
+  margin-top: var(--cardContentMarginTop, .5rem);
+}
+
+.card__title{
+  --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
+  font-size: var(--cardTitleFontSize, 1.25rem);
+}
+
+.timeline{
+  display: var(--timelineDisplay, grid);
+  grid-row-gap: var(--timelineGroupsGap, 2rem);
+}
+
+.timeline__year{
+  margin-bottom: 1.25rem; /* 1 */
+}
+
+.timeline__cards{
+  display: var(--timeloneCardsDisplay, grid);
+  grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+}
+
+.timeline{
+  --uiTimelineMainColor: var(--timelineMainColor, #222);
+  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+  border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.timeline__year{
+  --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
+  --timeColor: var(--uiTimelineSecondaryColor);
+  --timeBackgroundColor: var(--uiTimelineMainColor);
+  --timeFontWeight: var(--timelineYearFontWeight, 400);
+}
+
+.timeline__cards > .timeline__card{
+  position: relative;
+  margin-left: var(--timelineCardLineGap, 1rem);
+}
+
+.timeline__cards{
+  overflow: hidden;
+  padding-top: .25rem; 
+  padding-bottom: .25rem; 
+}
+
+.timeline__cards > .timeline__card::before{
+  content: "";
+  width: 100%;
+  height: var(--timelineCardLineWidth, 2px);
+  background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
+
+  position: absolute;
+  top: var(--timelineCardLineTop, 1rem);
+  left: -50%;
+  z-index: -1;
+}
+
+.timeline{
+  --timelineMainColor: black;
+}
+
+.card__content > p{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+p:last-child{
+  margin-bottom: 0;
+}
+
+.page{
+  width: 90%;
+  height: 82%;
+  padding: 0px;
+  margin: 2% 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.substack{
+  border:1px solid #EEE; 
+  background-color: #fff;
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  margin: 1rem auto;;
+}
+
+.timeline__card{
+  border-radius: var(--timelineCardBorderRadius, 2px);
+  border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+  box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+  background-color: var(--timelineCardBackgroundColor, #fff);
+}
+
+.timeline__card{
+  padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+}
+
+/***** FIN TIMELINES *****/
+
+
+/***** CSS POUR SONDAGE *****/
+.sondageWidg > h3{
+  margin-bottom: 5px;
+}
+
+.sondage {
+  display: flex;
+
+}
+
+.recharts-legend-item-text {
+  font-size: 1.3vw;
+}
+
+
+/***** CSS POUR FORMS *****/
+form{
+  padding:10px;
+}
+
+form select, form input, form label{
+  padding: 10px;
+  margin: 3px 20px;
+}
+
+.forms h4{
+  margin-bottom: 0px ;
+  padding-left: 30px;
+}
+/***** FIN FORMS *****/
